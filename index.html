@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#183229">
+<title>Convención Alda 2026 · Villa de Almazán</title>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ECEEE8; --surface:#F8F9F5; --ink:#183229; --muted:#5D6B62; --rule:#CDD3C9;
+  --accent:#C77F17; --accent-ink:#FFFFFF; --moss:#56704A; --now:#183229; --now-ink:#F3F5EF;
+  --display:"Satoshi",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Satoshi",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1915; --surface:#17241F; --ink:#E6EBE4; --muted:#9AA79F; --rule:#2A3A33;
+    --accent:#E3A23E; --accent-ink:#1A1206; --moss:#93AE83; --now:#E3A23E; --now-ink:#1A1206;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1915; --surface:#17241F; --ink:#E6EBE4; --muted:#9AA79F; --rule:#2A3A33;
+  --accent:#E3A23E; --accent-ink:#1A1206; --moss:#93AE83; --now:#E3A23E; --now-ink:#1A1206;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+main{max-width:640px;margin:0 auto;padding:20px 20px 120px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* Cabecera */
+.brand{display:flex;align-items:center;gap:18px;margin:8px 0 28px}
+.logo{width:76px;aspect-ratio:326/325;flex:none;background:var(--ink);-webkit-mask:url(data:image/png;base64,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) center/contain no-repeat;mask:url(data:image/png;base64,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) center/contain no-repeat}
+.brand h1{font-family:var(--display);font-weight:900;font-size:1.5rem;letter-spacing:-.02em;line-height:1;margin:0 0 4px}
+.brand p{margin:0;color:var(--muted);font-size:.875rem;line-height:1.35}
+.days-left{font-family:var(--display);font-weight:900;font-size:clamp(3.25rem,15vw,5.5rem);line-height:.95;letter-spacing:-.03em;margin:0}
+
+/* Selector de grupo */
+
+/* Ahora */
+.clock-sub{color:var(--muted);margin:10px 0 28px;font-size:.9375rem}
+.now-card{background:var(--now);color:var(--now-ink);border-radius:20px;padding:22px 22px 20px;margin-bottom:14px}
+.now-card .when{font-size:.875rem;font-weight:600;opacity:.8}
+.now-card h2{font-family:var(--display);font-weight:900;font-size:1.875rem;line-height:1.05;letter-spacing:-.02em;margin:6px 0 8px}
+.now-card p{margin:0;opacity:.9}
+.bar{height:6px;border-radius:6px;background:color-mix(in srgb,var(--now-ink) 22%,transparent);margin-top:18px;overflow:hidden}
+.bar i{display:block;height:100%;background:currentColor;border-radius:6px}
+.left{margin-top:8px;font-size:.8125rem;opacity:.8}
+.next{border:1px solid var(--rule);border-radius:16px;padding:16px 18px;background:var(--surface);margin-bottom:10px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline}
+.next .t{font-family:var(--display);font-weight:900;font-size:1.375rem;line-height:1;letter-spacing:-.01em}
+.next h3{margin:0;font-size:1rem;font-weight:600;line-height:1.3}
+.next .meta{grid-column:2;color:var(--muted);font-size:.875rem}
+.section-h{font-weight:700;font-size:.9375rem;margin:28px 0 10px}
+.count{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 28px}
+.count div{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:12px 8px;text-align:center}
+.count b{display:block;font-family:var(--display);font-weight:900;font-size:2.5rem;line-height:1}
+.count span{color:var(--muted);font-size:.8125rem}
+
+/* Agenda */
+.days{display:flex;gap:8px;margin-bottom:20px}
+.days button{flex:1;text-align:left;border:1px solid var(--rule);background:var(--surface);border-radius:14px;padding:10px 14px;cursor:pointer}
+.days button b{display:block;font-family:var(--display);font-weight:900;font-size:1.25rem;line-height:1.05}
+.days button span{color:var(--muted);font-size:.8125rem}
+.days button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.days button[aria-pressed="true"] span{color:inherit;opacity:.85}
+.tl{list-style:none;margin:0;padding:0}
+.ev{display:grid;grid-template-columns:4.5rem 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--rule)}
+.ev:first-child{border-top:0}
+.ev .t{font-family:var(--display);font-weight:900;font-size:1.25rem;line-height:1;letter-spacing:-.01em}
+.ev .t small{display:block;font-family:var(--body);font-weight:500;font-size:.75rem;color:var(--muted);margin-top:4px}
+.ev h3{margin:0 0 4px;font-size:1.0625rem;line-height:1.3;font-weight:600}
+.ev .meta{color:var(--muted);font-size:.875rem}
+.ev ul{margin:8px 0 0;padding-left:18px;font-size:.9375rem}
+.ev .tag{display:inline-block;font-size:.75rem;font-weight:600;border-radius:999px;padding:2px 9px;margin-top:8px;border:1px solid var(--moss);color:var(--moss)}
+.ev.past{opacity:.45}
+.ev.live{background:var(--now);color:var(--now-ink);border-radius:16px;padding:16px 14px;margin:6px -14px;border-top:0}
+.ev.live + .ev{border-top:0}
+.ev.live .meta,.ev.live .t small{color:inherit;opacity:.8}
+.ev.live .tag{border-color:currentColor;color:inherit}
+.bus h3::before{content:"🚌 "}
+
+/* Info */
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:18px 20px;margin-bottom:14px}
+.card h2{font-family:var(--display);font-weight:900;font-size:1.375rem;letter-spacing:-.01em;line-height:1;margin:0 0 12px}
+.card p{margin:0 0 8px}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:7.5rem 1fr;gap:12px;padding:9px 0;border-top:1px solid var(--rule);font-size:.9375rem}
+.rows li:first-child{border-top:0}
+.card h3.sub{font-size:.875rem;font-weight:700;margin:16px 0 2px;color:var(--muted)}
+.card h3.sub:first-of-type{margin-top:0}
+.rows .m{color:var(--muted);font-size:.8125rem}
+.rows b{font-weight:600}
+
+/* Simulador */
+details.sim{margin-top:36px;color:var(--muted);font-size:.875rem}
+details.sim summary{cursor:pointer}
+details.sim input{width:100%;margin-top:12px;accent-color:var(--accent)}
+details.sim button{margin-top:8px;border:1px solid var(--rule);background:var(--surface);border-radius:999px;padding:6px 14px;cursor:pointer}
+
+/* Navegación inferior */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--rule);padding-bottom:env(safe-area-inset-bottom,0px);z-index:20}
+nav.tabs div{max-width:640px;margin:0 auto;display:flex}
+nav.tabs a{flex:1;text-align:center;padding:12px 0 14px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.9375rem}
+nav.tabs a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 3px 0 var(--accent)}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion: no-preference){ .now-card{animation:in .5s ease-out} @keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}} }
+</style>
+</head>
+<body>
+<main>
+  <header class="brand">
+    <div class="logo" role="img" aria-label="Alda Hotels"></div>
+    <div><h1>Convención 2026</h1><p>Alda Villa de Almazán (Soria)<br>17 y 18 de noviembre</p></div>
+  </header>
+
+  <section id="v-ahora"></section>
+  <section id="v-agenda" hidden></section>
+  <section id="v-info" hidden></section>
+</main>
+
+<nav class="tabs" aria-label="Secciones">
+  <div>
+    <a href="#ahora" data-v="ahora">Ahora</a>
+    <a href="#agenda" data-v="agenda">Agenda</a>
+    <a href="#info" data-v="info">Info</a>
+  </div>
+</nav>
+
+<script>
+const TZ = "Europe/Madrid";
+const D = (day, hm) => new Date(`2026-11-${day}T${hm}:00+01:00`);
+
+// Agenda (fuente: pestaña «Agenda» del Excel de la convención)
+const EVENTS = [
+  // Martes 17
+  {d:17, s:D(17,"12:00"), e:D(17,"14:00"), t:"Recepción de autoridades y presentación de Alda Villa de Almazán", p:"Cafetería", tag:"Autoridades e invitados"},
+  {d:17, s:D(17,"13:30"), e:D(17,"14:00"), t:"Autobús Soria → Almazán", p:"Salida desde la ciudad de Soria", bus:true},
+  {d:17, s:D(17,"14:00"), e:D(17,"16:00"), t:"Comida", p:"Sala comedor"},
+  {d:17, s:D(17,"16:00"), e:D(17,"18:00"), t:"Arranque de la convención", p:"Salón San Juan", items:["Presentación de la agenda de los dos días","Reparto de camisetas","Mural en equipo y mascota de la convención","…y alguna sorpresa"]},
+  {d:17, s:D(17,"18:00"), e:D(17,"18:30"), t:"Coffee break", p:"Sala comedor"},
+  {d:17, s:D(17,"18:30"), e:D(17,"20:00"), t:"Juego de preguntas y actividad física", p:"Salón San Juan"},
+  {d:17, s:D(17,"20:00"), e:D(17,"21:00"), t:"Carlos Barrio", p:"Discoteca"},
+  {d:17, s:D(17,"21:30"), e:D(18,"00:00"), t:"Cena temática con música tradicional", p:"Salón San Juan"},
+  {d:17, s:D(18,"00:00"), e:D(18,"00:15"), t:"Autobús Almazán → Soria", p:"Regreso a Soria", bus:true, point:true, late:true},
+  // Miércoles 18
+  {d:18, s:D(18,"08:00"), e:D(18,"09:30"), t:"Desayuno", p:""},
+  {d:18, s:D(18,"09:30"), e:D(18,"10:00"), t:"Autobús Soria → Almazán", p:"Salida desde la ciudad de Soria", bus:true},
+  {d:18, s:D(18,"10:30"), e:D(18,"14:30"), t:"Pruebas por equipos", p:"Pabellón"},
+  {d:18, s:D(18,"14:30"), e:D(18,"16:00"), t:"Comida picnic", p:"Pabellón"},
+  {d:18, s:D(18,"16:30"), e:D(18,"19:00"), t:"Tarde de ocio", p:"Almazán", items:["Visita al pueblo y al Ayuntamiento. Punto de encuentro: puerta de la villa, en la oficina de turismo","Búsqueda de setas con la Asociación Micológica. Recogida en la arboleda junto al pabellón"]},
+  {d:18, s:D(18,"16:30"), e:D(18,"19:00"), t:"Autobús arboleda → Navalcaballo", p:"Para la búsqueda de setas", bus:true},
+  {d:18, s:D(18,"19:00"), e:D(18,"19:20"), t:"Autobús Navalcaballo → Almazán", p:"Vuelta de la búsqueda de setas", bus:true},
+  {d:18, s:D(18,"19:30"), e:D(18,"19:45"), t:"Autobús Almazán → Soria", p:"Para descansar y cambiarse", bus:true, point:true},
+  {d:18, s:D(18,"20:30"), e:D(18,"20:45"), t:"Autobús Soria → Almazán", p:"Vuelta para el discurso y la cena", bus:true, point:true},
+  {d:18, s:D(18,"16:30"), e:D(18,"18:00"), t:"Reunión de departamentos", p:"Salón San Juan"},
+  {d:18, s:D(18,"18:00"), e:D(18,"18:15"), t:"Coffee break", p:"Sala comedor"},
+  {d:18, s:D(18,"18:15"), e:D(18,"19:00"), t:"Reunión de departamentos (segunda parte)", p:"Salón San Juan"},
+  {d:18, s:D(18,"19:00"), e:D(18,"21:00"), t:"Descanso y cambio de ropa", p:"Autobús a Soria a las 19:30 y vuelta a Almazán a las 20:30"},
+  {d:18, s:D(18,"21:00"), e:D(18,"21:30"), t:"Discurso de Alberto Boo", p:""},
+  {d:18, s:D(18,"21:30"), e:D(18,"23:00"), t:"Cena y entrega de premios", p:"Sala comedor y cafetería · Presenta Ignacio Filgueiras"},
+  {d:18, s:D(18,"23:00"), e:D(19,"01:00"), t:"Concierto de la Banda Poprumbera y DJ", p:"Dos horas de banda y después pincha Martín"},
+  {d:18, s:D(19,"01:00"), e:D(19,"01:15"), t:"Autobús Almazán → Soria (primer turno)", p:"Regreso a Soria", bus:true, point:true, late:true},
+  {d:18, s:D(19,"03:30"), e:D(19,"03:45"), t:"Autobús Almazán → Soria (último turno)", p:"Regreso a Soria", bus:true, point:true, late:true},
+  // Jueves 19
+  {d:19, s:D(19,"09:30"), e:D(19,"10:00"), t:"Autobús Almazán → Soria", p:"Regreso a Soria", bus:true},
+];
+EVENTS.sort((a,b)=>a.s-b.s);
+const DAYS = {17:{name:"Martes 17", short:"Martes"}, 18:{name:"Miércoles 18", short:"Miércoles"}, 19:{name:"Jueves 19", short:"Jueves"}};
+const dayOf = t => t >= D(19,"05:00").getTime() ? 19 : t >= D(18,"05:00").getTime() ? 18 : 17;
+
+const fmt = d => new Intl.DateTimeFormat("es-ES",{hour:"2-digit",minute:"2-digit",timeZone:TZ}).format(d);
+const esc = s => s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mins = ms => Math.max(0,Math.round(ms/60000));
+const human = m => m < 60 ? `${m} min` : `${Math.floor(m/60)} h${m%60?` ${m%60} min`:""}`;
+
+let simTime = null, view = "ahora", agendaDay = null;
+
+const now = () => simTime ? new Date(simTime) : new Date();
+const visible = () => EVENTS;
+const where = e => e.p ? `<div class="meta">${esc(e.p)}</div>` : "";
+const timeLabel = e => e.point ? fmt(e.s) : `${fmt(e.s)}–${fmt(e.e)}`;
+
+function renderAhora(){
+  const n = now(), list = visible();
+  const live = list.filter(e => e.s<=n && n<e.e && !e.point && !e.bus);
+  const upcoming = list.filter(e => e.s>n).slice(0,3);
+  let h = "";
+  const first = list[0].s, last = list[list.length-1].e;
+
+  if (n < first){
+    const dd = Math.ceil((first - n)/864e5);
+    h += `<p class="days-left">${dd===1?"Mañana":`${dd} días`}</p><p class="clock-sub">${dd===1?"empieza la convención":"para la convención"}</p>`;
+  } else if (n >= last){
+    h += `<p class="clock-sub">La convención ha terminado.</p>
+      <div class="now-card"><h2>Gracias por venir</h2><p>Nos vemos en la próxima.</p></div>`;
+  } else {
+    const dayName = DAYS[(live[0]||upcoming[0]||list[list.length-1]).d].name;
+    h += `<p class="clock-sub">${dayName} de noviembre</p>`;
+    if (live.length){
+      live.forEach(e=>{
+        const pct = Math.min(100,((n-e.s)/(e.e-e.s))*100);
+        h += `<div class="now-card"><div class="when">Ahora · ${timeLabel(e)}</div><h2>${esc(e.t)}</h2>${e.p?`<p>${esc(e.p)}</p>`:""}
+          <div class="bar"><i style="width:${pct.toFixed(1)}%"></i></div><div class="left">Quedan ${human(mins(e.e-n))}</div></div>`;
+      });
+    } else {
+      h += `<div class="now-card"><div class="when">Ahora</div><h2>Tiempo libre</h2><p>${upcoming[0]?`Lo siguiente empieza en ${human(mins(upcoming[0].s-n))}.`:""}</p></div>`;
+    }
+  }
+  if (upcoming.length){
+    h += `<h2 class="section-h">Lo siguiente</h2>`;
+    upcoming.forEach(e=>{
+      const sameDay = new Intl.DateTimeFormat("es-ES",{day:"numeric",timeZone:TZ}).format(e.s) === new Intl.DateTimeFormat("es-ES",{day:"numeric",timeZone:TZ}).format(n);
+      const lead = n>=first ? `En ${human(mins(e.s-n))}` : DAYS[e.d].name;
+      h += `<div class="next ${e.bus?"bus":""}"><span class="t">${fmt(e.s)}</span><h3>${e.bus?"🚌 ":""}${esc(e.t)}</h3><div class="meta">${lead}${e.p?` · ${esc(e.p)}`:""}</div></div>`;
+    });
+  }
+  h += `<details class="sim" ${simTime?"open":""}><summary>Ver la app en otro momento de la convención</summary>
+    <input type="range" id="simR" min="${D(17,"11:30").getTime()}" max="${D(19,"10:30").getTime()}" step="${15*6e4}" value="${simTime||D(17,"16:30").getTime()}" aria-label="Momento simulado">
+    <div id="simL">${simTime?`Simulando: ${DAYS[dayOf(simTime)].short} ${fmt(new Date(simTime))}`:"Mueve el control para ver qué aparecería"}</div>
+    ${simTime?`<button id="simX">Volver a la hora real</button>`:""}</details>`;
+  document.getElementById("v-ahora").innerHTML = h;
+  const r = document.getElementById("simR");
+  r.addEventListener("input", ()=>{ simTime = +r.value; renderAll(); });
+  const x = document.getElementById("simX"); if (x) x.onclick = ()=>{ simTime=null; renderAll(); };
+}
+
+function renderAgenda(){
+  const n = now();
+  if (!agendaDay) agendaDay = dayOf(n.getTime());
+  let h = `<div class="days" role="group" aria-label="Día">` + Object.entries(DAYS).map(([k,v])=>
+    `<button data-d="${k}" aria-pressed="${+k===agendaDay}"><b>${v.short}</b><span>${k} de noviembre</span></button>`).join("") + `</div><ol class="tl">`;
+  visible().filter(e=>e.d===agendaDay).forEach(e=>{
+    const cls = ["ev", e.bus?"bus":"", (e.e<=n)?"past":"", (e.s<=n&&n<e.e&&!e.point)?"live":""].join(" ");
+    h += `<li class="${cls}"><div class="t">${fmt(e.s)}${e.point?"":`<small>hasta ${fmt(e.e)}</small>`}</div><div>
+      <h3>${esc(e.t)}</h3>${where(e)}
+      ${e.items?`<ul>${e.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>`:""}
+      ${e.tag?`<span class="tag">${esc(e.tag)}</span>`:""}</div></li>`;
+  });
+  h += `</ol>`;
+  const el = document.getElementById("v-agenda"); el.innerHTML = h;
+  el.querySelectorAll(".days button").forEach(b=>b.onclick=()=>{agendaDay=+b.dataset.d;renderAgenda();});
+}
+
+function renderInfo(){
+  const buses = EVENTS.filter(e=>e.bus);
+  const busRows = Object.keys(DAYS).map(k=>{
+    const rows = buses.filter(e=>e.d===+k).map(e=>`<li><b>${timeLabel(e)}</b><span>${esc(e.t.replace(/^Autobús /,""))}${e.late?' <small class="m">(madrugada)</small>':''}</span></li>`).join("");
+    return `<h3 class="sub">${DAYS[k].name}</h3><ul class="rows">${rows}</ul>`;
+  }).join("");
+  document.getElementById("v-info").innerHTML = `
+    <div class="card"><h2>Autobuses</h2>${busRows}</div>
+    <div class="card"><h2>Qué ropa llevar</h2>
+      <p><b>Miércoles por la mañana: pruebas en el pabellón.</b> Ropa deportiva y cómoda: chándal o mallas, camiseta transpirable y una sudadera o forro polar para ponerte y quitarte. Zapatillas de deporte, mejor con la suela limpia.</p>
+      <p><b>Abrígate.</b> Es noviembre en Soria y un pabellón puede estar frío, sobre todo al principio y en los ratos de espera. Trae abrigo, y gorro y guantes para los trayectos.</p>
+      <p><b>Miércoles por la tarde, búsqueda de setas.</b> Calzado que se pueda manchar de barro y ropa de abrigo para estar en el campo.</p>
+      <p><b>Botella de agua</b> para las pruebas.</p>
+    </div>
+    <div class="card"><h2>Dónde es cada cosa</h2><p>Todo es en Alda Villa de Almazán.</p><ul class="rows">
+      <li><b>Salón San Juan</b><span>Arranque, juegos, cena del martes y reuniones de departamento</span></li>
+      <li><b>Sala comedor</b><span>Comida del martes, coffee breaks y cena de premios</span></li>
+      <li><b>Pabellón</b><span>Pruebas por equipos y picnic del miércoles</span></li>
+      <li><b>Discoteca</b><span>Carlos Barrio, martes a las 20:00</span></li>
+      <li><b>Cafetería</b><span>Recepción de autoridades y cena de premios</span></li>
+    </ul></div>
+    <div class="card"><h2>Ten en cuenta</h2>
+      <p>El miércoles entre las 19:00 y las 21:00 hay tiempo para descansar y cambiarse. A las 21:00 hay que estar de vuelta en Almazán.</p>
+      <p>El miércoles por la tarde hay dos planes de ocio: visita al pueblo o búsqueda de setas.</p>
+    </div>`;
+}
+
+function renderAll(){
+  renderAhora(); renderAgenda(); renderInfo();
+}
+
+function route(){
+  const v = (location.hash||"#ahora").slice(1);
+  view = ["ahora","agenda","info"].includes(v) ? v : "ahora";
+  ["ahora","agenda","info"].forEach(k=>document.getElementById("v-"+k).hidden = k!==view);
+  document.querySelectorAll("nav.tabs a").forEach(a=>{ if(a.dataset.v===view) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  window.scrollTo(0,0);
+}
+
+window.addEventListener("hashchange", route);
+renderAll(); route();
+setInterval(()=>{ if(!simTime) { renderAhora(); if(view==="agenda") renderAgenda(); } }, 30000);
+</script>
+</body>
+</html>

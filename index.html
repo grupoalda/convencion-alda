@@ -88,6 +88,8 @@ button{font:inherit;color:inherit}
 .ev.live .meta,.ev.live .t small{color:inherit;opacity:.8}
 .ev.live .tag{border-color:currentColor;color:inherit}
 .bus h3::before{content:"🚌 "}
+a.map{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.ev.live a.map{color:inherit}
 
 /* Info */
 .card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:18px 20px;margin-bottom:14px}
@@ -144,39 +146,37 @@ const D = (day, hm) => new Date(`2026-11-${day}T${hm}:00+01:00`);
 const EVENTS = [
   // Martes 17
   {d:17, s:D(17,"12:00"), e:D(17,"14:00"), t:"Recepción de autoridades y presentación de Alda Villa de Almazán", p:"Cafetería", tag:"Autoridades e invitados"},
-  {d:17, s:D(17,"13:30"), e:D(17,"14:00"), t:"Autobús Soria → Almazán", p:"Salida desde la ciudad de Soria", bus:true},
+  {d:17, s:D(17,"13:30"), e:D(17,"14:00"), t:"Autobús Soria → Almazán", p:"Subida en Soria: Calle de Las Balsillas, 5", bus:true, map:true},
   {d:17, s:D(17,"14:00"), e:D(17,"16:00"), t:"Comida", p:"Sala comedor"},
-  {d:17, s:D(17,"16:00"), e:D(17,"18:00"), t:"Arranque de la convención", p:"Salón San Juan", items:["Presentación de la agenda de los dos días","Reparto de camisetas","Mural en equipo y mascota de la convención","…y alguna sorpresa"]},
+  {d:17, s:D(17,"16:00"), e:D(17,"18:00"), t:"Actividad de Recursos Humanos", p:"Salón San Juan"},
   {d:17, s:D(17,"18:00"), e:D(17,"18:30"), t:"Coffee break", p:"Sala comedor"},
-  {d:17, s:D(17,"18:30"), e:D(17,"20:00"), t:"Juego de preguntas y actividad física", p:"Salón San Juan"},
-  {d:17, s:D(17,"20:00"), e:D(17,"21:00"), t:"Carlos Barrio", p:"Discoteca"},
-  {d:17, s:D(17,"21:30"), e:D(18,"00:00"), t:"Cena temática con música tradicional", p:"Salón San Juan"},
-  {d:17, s:D(18,"00:00"), e:D(18,"00:15"), t:"Autobús Almazán → Soria", p:"Regreso a Soria", bus:true, point:true, late:true},
+  {d:17, s:D(17,"18:30"), e:D(17,"20:00"), t:"Actividad de Transformación Digital", p:"Salón San Juan"},
+  {d:17, s:D(17,"20:00"), e:D(17,"21:00"), t:"Actuación", p:"Discoteca"},
+  {d:17, s:D(17,"21:30"), e:D(18,"00:00"), t:"Cena", p:"Salón San Juan"},
+  {d:17, s:D(18,"00:00"), e:D(18,"00:15"), t:"Autobús Almazán → Soria", p:"Sale de Alda Villa de Almazán · Bajada en Soria: Calle de Las Balsillas, 5", bus:true, point:true, late:true, map:true},
   // Miércoles 18
   {d:18, s:D(18,"08:00"), e:D(18,"09:30"), t:"Desayuno", p:""},
-  {d:18, s:D(18,"09:30"), e:D(18,"10:00"), t:"Autobús Soria → Almazán", p:"Salida desde la ciudad de Soria", bus:true},
+  {d:18, s:D(18,"09:30"), e:D(18,"10:00"), t:"Autobús Soria → Almazán", p:"Subida en Soria: Calle de Las Balsillas, 5", bus:true, map:true},
   {d:18, s:D(18,"10:30"), e:D(18,"14:30"), t:"Pruebas por equipos", p:"Pabellón"},
   {d:18, s:D(18,"14:30"), e:D(18,"16:00"), t:"Comida picnic", p:"Pabellón"},
-  {d:18, s:D(18,"16:30"), e:D(18,"19:00"), t:"Tarde de ocio", p:"Almazán", items:["Visita al pueblo y al Ayuntamiento. Punto de encuentro: puerta de la villa, en la oficina de turismo","Búsqueda de setas con la Asociación Micológica. Recogida en la arboleda junto al pabellón"]},
-  {d:18, s:D(18,"16:30"), e:D(18,"19:00"), t:"Autobús arboleda → Navalcaballo", p:"Para la búsqueda de setas", bus:true},
-  {d:18, s:D(18,"19:00"), e:D(18,"19:20"), t:"Autobús Navalcaballo → Almazán", p:"Vuelta de la búsqueda de setas", bus:true},
-  {d:18, s:D(18,"19:30"), e:D(18,"19:45"), t:"Autobús Almazán → Soria", p:"Para descansar y cambiarse", bus:true, point:true},
-  {d:18, s:D(18,"20:30"), e:D(18,"20:45"), t:"Autobús Soria → Almazán", p:"Vuelta para el discurso y la cena", bus:true, point:true},
+  {d:18, s:D(18,"16:30"), e:D(18,"18:30"), t:"Tarde de ocio", p:"Elige una de las dos", items:["Ruta guiada a Almazán","Ruta micológica"]},
+  {d:18, s:D(18,"16:30"), e:D(18,"16:45"), t:"Autobús arboleda → Navalcaballo", p:"Para la ruta micológica · La arboleda está al lado del pabellón", bus:true, point:true},
   {d:18, s:D(18,"16:30"), e:D(18,"18:00"), t:"Reunión de departamentos", p:"Salón San Juan"},
   {d:18, s:D(18,"18:00"), e:D(18,"18:15"), t:"Coffee break", p:"Sala comedor"},
   {d:18, s:D(18,"18:15"), e:D(18,"19:00"), t:"Reunión de departamentos (segunda parte)", p:"Salón San Juan"},
-  {d:18, s:D(18,"19:00"), e:D(18,"21:00"), t:"Descanso y cambio de ropa", p:"Autobús a Soria a las 19:30 y vuelta a Almazán a las 20:30"},
+  {d:18, s:D(18,"18:10"), e:D(18,"19:00"), t:"Autobús Navalcaballo → Almazán → Soria", p:"18:10 sale de Navalcaballo (ruta micológica) · 18:30 sale de Alda Villa de Almazán · 19:00 llega a Soria, Calle de Las Balsillas, 5", bus:true, map:true},
+  {d:18, s:D(18,"19:00"), e:D(18,"21:00"), t:"Descanso y cambio de ropa", p:"Autobús de vuelta a Almazán a las 20:30"},
+  {d:18, s:D(18,"20:30"), e:D(18,"21:00"), t:"Autobús Soria → Almazán", p:"Subida en Soria: Calle de Las Balsillas, 5", bus:true, map:true},
   {d:18, s:D(18,"21:00"), e:D(18,"21:30"), t:"Discurso de Alberto Boo", p:""},
   {d:18, s:D(18,"21:30"), e:D(18,"23:00"), t:"Cena y entrega de premios", p:"Sala comedor y cafetería · Presenta Ignacio Filgueiras"},
   {d:18, s:D(18,"23:00"), e:D(19,"01:00"), t:"Concierto de la Banda Poprumbera y DJ", p:"Dos horas de banda y después pincha Martín"},
-  {d:18, s:D(19,"01:00"), e:D(19,"01:15"), t:"Autobús Almazán → Soria (primer turno)", p:"Regreso a Soria", bus:true, point:true, late:true},
-  {d:18, s:D(19,"03:30"), e:D(19,"03:45"), t:"Autobús Almazán → Soria (último turno)", p:"Regreso a Soria", bus:true, point:true, late:true},
-  // Jueves 19
-  {d:19, s:D(19,"09:30"), e:D(19,"10:00"), t:"Autobús Almazán → Soria", p:"Regreso a Soria", bus:true},
+  {d:18, s:D(19,"01:00"), e:D(19,"01:15"), t:"Autobús Almazán → Soria (primer turno)", p:"Sale de Alda Villa de Almazán · Bajada en Soria: Calle de Las Balsillas, 5", bus:true, point:true, late:true, map:true},
+  {d:18, s:D(19,"03:30"), e:D(19,"03:45"), t:"Autobús Almazán → Soria (último turno)", p:"Sale de Alda Villa de Almazán · Bajada en Soria: Calle de Las Balsillas, 5", bus:true, point:true, late:true, map:true},
 ];
+const MAPS = "https://www.google.com/maps/place//data=!4m2!3m1!1s0xd44d2d8b068049b:0xd87a3c09b0e4249e?sa=X&ved=1t:8290&hl=es-ES&ictx=111";
 EVENTS.sort((a,b)=>a.s-b.s);
-const DAYS = {17:{name:"Martes 17", short:"Martes"}, 18:{name:"Miércoles 18", short:"Miércoles"}, 19:{name:"Jueves 19", short:"Jueves"}};
-const dayOf = t => t >= D(19,"05:00").getTime() ? 19 : t >= D(18,"05:00").getTime() ? 18 : 17;
+const DAYS = {17:{name:"Martes 17", short:"Martes"}, 18:{name:"Miércoles 18", short:"Miércoles"}};
+const dayOf = t => t >= D(18,"05:00").getTime() ? 18 : 17;
 
 const fmt = d => new Intl.DateTimeFormat("es-ES",{hour:"2-digit",minute:"2-digit",timeZone:TZ}).format(d);
 const esc = s => s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -187,7 +187,8 @@ let simTime = null, view = "ahora", agendaDay = null;
 
 const now = () => simTime ? new Date(simTime) : new Date();
 const visible = () => EVENTS;
-const where = e => e.p ? `<div class="meta">${esc(e.p)}</div>` : "";
+const mapLink = e => e.map ? ` · <a class="map" href="${MAPS}" target="_blank" rel="noopener">Ver en el mapa</a>` : "";
+const where = e => e.p ? `<div class="meta">${esc(e.p)}${mapLink(e)}</div>` : "";
 const timeLabel = e => e.point ? fmt(e.s) : `${fmt(e.s)}–${fmt(e.e)}`;
 
 function renderAhora(){
@@ -225,7 +226,7 @@ function renderAhora(){
     });
   }
   h += `<details class="sim" ${simTime?"open":""}><summary>Ver la app en otro momento de la convención</summary>
-    <input type="range" id="simR" min="${D(17,"11:30").getTime()}" max="${D(19,"10:30").getTime()}" step="${15*6e4}" value="${simTime||D(17,"16:30").getTime()}" aria-label="Momento simulado">
+    <input type="range" id="simR" min="${D(17,"11:30").getTime()}" max="${D(19,"04:00").getTime()}" step="${15*6e4}" value="${simTime||D(17,"16:30").getTime()}" aria-label="Momento simulado">
     <div id="simL">${simTime?`Simulando: ${DAYS[dayOf(simTime)].short} ${fmt(new Date(simTime))}`:"Mueve el control para ver qué aparecería"}</div>
     ${simTime?`<button id="simX">Volver a la hora real</button>`:""}</details>`;
   document.getElementById("v-ahora").innerHTML = h;
@@ -258,23 +259,23 @@ function renderInfo(){
     return `<h3 class="sub">${DAYS[k].name}</h3><ul class="rows">${rows}</ul>`;
   }).join("");
   document.getElementById("v-info").innerHTML = `
-    <div class="card"><h2>Autobuses</h2>${busRows}</div>
+    <div class="card"><h2>Autobuses</h2><p><b>En Soria</b> se sube y se baja en la Calle de Las Balsillas, 5 (42001 Soria). <a class="map" href="${MAPS}" target="_blank" rel="noopener">Ver en Google Maps</a></p><p><b>En Almazán</b> el autobús sale del propio hotel.</p>${busRows}</div>
     <div class="card"><h2>Qué ropa llevar</h2>
-      <p><b>Miércoles por la mañana: pruebas en el pabellón.</b> Ropa deportiva y cómoda: chándal o mallas, camiseta transpirable y una sudadera o forro polar para ponerte y quitarte. Zapatillas de deporte, mejor con la suela limpia.</p>
-      <p><b>Abrígate.</b> Es noviembre en Soria y un pabellón puede estar frío, sobre todo al principio y en los ratos de espera. Trae abrigo, y gorro y guantes para los trayectos.</p>
-      <p><b>Miércoles por la tarde, búsqueda de setas.</b> Calzado que se pueda manchar de barro y ropa de abrigo para estar en el campo.</p>
+      <p><b>Miércoles por la mañana: pruebas en el pabellón.</b> Ropa deportiva y cómoda: chándal o mallas, camiseta transpirable y una sudadera o forro polar para ponerte y quitarte. Zapatillas de deporte.</p>
+      <p><b>Abrígate.</b> Es noviembre en Soria y un pabellón puede estar frío, sobre todo al principio y en los ratos de espera. Trae abrigo.</p>
+      <p><b>Miércoles por la tarde, ruta micológica.</b> Calzado que se pueda manchar de barro y ropa de abrigo para estar en el campo.</p>
       <p><b>Botella de agua</b> para las pruebas.</p>
     </div>
     <div class="card"><h2>Dónde es cada cosa</h2><p>Todo es en Alda Villa de Almazán.</p><ul class="rows">
-      <li><b>Salón San Juan</b><span>Arranque, juegos, cena del martes y reuniones de departamento</span></li>
+      <li><b>Salón San Juan</b><span>Actividades de RRHH y Transformación Digital, cena del martes y reuniones de departamento</span></li>
       <li><b>Sala comedor</b><span>Comida del martes, coffee breaks y cena de premios</span></li>
       <li><b>Pabellón</b><span>Pruebas por equipos y picnic del miércoles</span></li>
-      <li><b>Discoteca</b><span>Carlos Barrio, martes a las 20:00</span></li>
+      <li><b>Discoteca</b><span>Actuación, martes a las 20:00</span></li>
       <li><b>Cafetería</b><span>Recepción de autoridades y cena de premios</span></li>
     </ul></div>
     <div class="card"><h2>Ten en cuenta</h2>
-      <p>El miércoles entre las 19:00 y las 21:00 hay tiempo para descansar y cambiarse. A las 21:00 hay que estar de vuelta en Almazán.</p>
-      <p>El miércoles por la tarde hay dos planes de ocio: visita al pueblo o búsqueda de setas.</p>
+      <p>El miércoles el autobús sale a las 18:10 de Navalcaballo, a las 18:30 de Almazán y llega a Soria a las 19:00, para descansar y cambiarse. A las 20:30 vuelve a Almazán. Quien esté en la reunión de departamentos se queda en Almazán.</p>
+      <p>El miércoles por la tarde hay dos planes de ocio: ruta guiada a Almazán o ruta micológica.</p>
     </div>`;
 }
 
